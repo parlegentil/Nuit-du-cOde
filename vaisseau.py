@@ -29,7 +29,7 @@ class vaisseau:
             self.coord = (self.coord[0] + self.directions[dire][0], self.coord[1] + self.directions[dire][1])
 
 
-    def dessin(self, dire, lab):
+    def dessine(self, dire, lab):
         
         self.mouvement(dire, lab)
 
