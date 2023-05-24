@@ -7,8 +7,38 @@ class Vaisseau:
         self.coord = coord
         self.directions = [(0, 0), (1, 0), (-1, 0), (0, 1), (0, -1)]
     
-    def sur_ennemi(self):
-        pass
+    def sur_ennemi(self, ennemis):
+        sur_enm = False
+        for ennemi in ennemis:
+            if (self.coord[0] > ennemi.x 
+                and self.coord[0] < ennemi.x + 6
+                and self.coord[1] > ennemi.y
+                and self.coord[1] < ennemi.y + 6):
+
+                sur_enm = True
+
+            if (self.coord[0] + 6 > ennemi.x 
+                and self.coord[0] + 6 < ennemi.x + 6
+                and self.coord[1] > ennemi.y
+                and self.coord[1] < ennemi.y + 6):
+
+                sur_enm = True
+
+            if (self.coord[0] > ennemi.x 
+                and self.coord[0] < ennemi.x + 6
+                and self.coord[1] + 6 > ennemi.y
+                and self.coord[1] + 6 < ennemi.y + 6):
+
+                sur_enm = True
+
+            if (self.coord[0] + 6 > ennemi.x 
+                and self.coord[0] + 6 < ennemi.x + 6
+                and self.coord[1] + 6 > ennemi.y
+                and self.coord[1] + 6 < ennemi.y + 6):
+
+                sur_enm = True
+
+            return sur_enm
 
     def pos_dans_lab(self, lab):
         position = (0, 0)
