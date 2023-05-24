@@ -36,17 +36,17 @@ class Jeu:
             ennemi.dessine()
 
 
-    def update(self):
+     def update(self):
         if pyxel.btn(pyxel.KEY_RIGHT):
-            dire = 1
+            self.dire = 1
         elif pyxel.btn(pyxel.KEY_LEFT):
-            dire = 2
+            self.dire = 2
         elif pyxel.btn(pyxel.KEY_UP):
-            dire = 4
+            self.dire = 4
         elif pyxel.btn(pyxel.KEY_DOWN):
-            dire = 3
+            self.dire = 3
         else:
-            dire = 1
+            self.dire = 1
 
 jeu = Jeu()
 pyxel.run(jeu.update, jeu.draw)
