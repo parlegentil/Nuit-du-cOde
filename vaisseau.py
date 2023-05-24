@@ -1,4 +1,6 @@
-class vaisseau:
+import pyxel
+
+class Vaisseau:
     """"""
 
     def __init__(self, coord):
