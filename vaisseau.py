@@ -38,7 +38,7 @@ class Vaisseau:
 
                 sur_enm = True
 
-            return sur_enm
+        return sur_enm
 
     def pos_dans_lab(self, lab):
         position = (0, 0)
